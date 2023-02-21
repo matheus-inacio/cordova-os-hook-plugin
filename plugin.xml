@@ -6,23 +6,11 @@
     <keywords>cordova,eugestor,outsystems</keywords>
     <repo>https://github.com/matheus-inacio/cordova-os-hook-plugin.git</repo>
 
-    <js-module src="www/Empty.js" name="Empty">
-        <clobbers target="cordova.plugins.percolatestudio.Empty" />
-    </js-module>
-
-     <platform name="android">
-        <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="Empty" >
-                <param name="android-package" value="com.percolatestudio.cordova.empty.PSEmpty"/>
-            </feature>
-        </config-file>
-             
+     <platform name="android">             
         <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='MainActivity']" mode="merge">
             <activity android:name="MainActivity" android:theme="@style/AppTheme"/>
         </edit-config>
         <source-file src="styles.xml" target-dir="app/src/main/res/values" />
-
-        <source-file src="src/android/PSEmpty.java" target-dir="src/com/percolatestudio/cordova/empty" />
     </platform>
 
 </plugin>
