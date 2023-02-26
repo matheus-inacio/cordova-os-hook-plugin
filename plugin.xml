@@ -10,8 +10,7 @@
         <hook type="before_plugin_install" src="scripts/androidBeforeInstall.js" />
         <source-file src="egstyles.xml" target-dir="app/src/main/res/values" />
         <source-file src="bg_eg.xml" target-dir="app/src/main/res/color" />
-        <source-file src="eg_logo.xml" target-dir="app/src/main/res/drawable" />
-        <resource-file src="eg_logo.xml" target="app/src/main/res/drawable/ic_cdv_splashscreen.xml"/>
+        <source-file src="eg_logo.xml" target="app/src/main/res/drawable/ic_cdv_splashscreen.xml"/>
     </platform>
 
 </plugin>
