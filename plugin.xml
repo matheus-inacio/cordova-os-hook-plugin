@@ -7,10 +7,11 @@
     <repo>https://github.com/matheus-inacio/cordova-os-hook-plugin.git</repo>
 
      <platform name="android">
-        <hook type="before_plugin_install" src="scripts/androidBeforeInstall.js" />
+        <hook type="before_plugin_install" src="scripts/androidHookScript.js" />
         <source-file src="egstyles.xml" target-dir="app/src/main/res/values" />
         <source-file src="bg_eg.xml" target-dir="app/src/main/res/color" />
         <source-file src="eg_logo.xml" target-dir="app/src/main/res/drawable" />
+        <source-file src="ic_cdv_splashscreen.xml" target-dir="app/src/main/res/drawable"/>
     </platform>
 
 </plugin>
