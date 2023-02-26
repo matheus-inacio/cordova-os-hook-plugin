@@ -12,7 +12,7 @@ module.exports = function(ctx) {
     var data = fs.readFileSync(icSplashPath, 'utf8');
     console.log(data.toString()); 
     var themesDoc = xmlHelpers.parseElementtreeSync(icSplashPath);
-    var iconTag = themesDoc.find('resources/style/item[@name="windowSplashScreenAnimatedIcon"]');
+    var iconTag = themesDoc.find('./resources/style/item[@name="windowSplashScreenAnimatedIcon"]');
     iconTag.text = "@drawable/eg_logo";
     fs.writeFileSync(icSplashPath, themesDoc.write({indent: 4}), 'utf-8');
 
