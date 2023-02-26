@@ -8,4 +8,10 @@
     <item name="android:navigationBarColor">#ff486496</item> 
     <item name="android:windowLightNavigationBar">false</item>
   </style>
+  
+  <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+    <item name="windowSplashScreenBackground">@color/bg_eg</item>
+    <item name="windowSplashScreenAnimatedIcon">@drawable/eg_logo</item>
+    <item name="postSplashScreenTheme">@style/Theme.App.SplashScreen</item>
+  </style>
 </resources>
