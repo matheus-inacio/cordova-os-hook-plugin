@@ -3,7 +3,7 @@
   <style name="AppTheme" parent="@style/Theme.App.SplashScreen">
     <item name="android:background">@drawable/splash</item>
     <item name="android:windowDrawsSystemBarBackgrounds">true</item>    
-    <item name="android:statusBarColor">#ff4d6ca3</item>
+    <item name="android:statusBarColor">#ff3f527a</item>
     <item name="android:windowLightStatusBar">false</item>
     <item name="android:navigationBarColor">#ff486496</item> 
     <item name="android:windowLightNavigationBar">true</item>
