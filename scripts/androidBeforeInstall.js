@@ -9,6 +9,6 @@ module.exports = function(ctx) {
         throw new Error(manifestPath + ' has incorrect root node name (expected "manifest")');
     }
     var activityTag = doc.find("application/activity");
-    activityTag.attrib["android:theme"] = "@style/AppTheme";
+    activityTag.attrib["android:theme"] = "@style/Theme.App.Starting";
     fs.writeFileSync(manifestPath, doc.write({indent: 4}), 'utf-8');
 };
