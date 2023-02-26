@@ -1,0 +1,27 @@
+{
+  "name": "io.eugestor.custom.plugin",
+  "version": "1.0.0",
+  "description": "Plugin to set Android window background for Cordova/Ionic applications",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/matheus-inacio/cordova-os-hook-plugin.git"
+  },
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android",
+    "payments",
+    "android",
+    "ionic",
+    "background",
+    "window",
+    "background"
+  ],
+  "author": {
+    "name": "Matheus",
+    "email": "matheus.medeiros@insidesistemas.com.br",
+    "url": "https://insidesistemas.com.br"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/matheus-inacio/cordova-os-hook-plugin"
+}
