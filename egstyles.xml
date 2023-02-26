@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <style name="AppTheme" parent="@style/Theme.App.SplashScreen">
-    <item name="android:background">@drawable/splash</item>
+    <item name="android:background">@drawable/screen</item>
     <item name="android:windowDrawsSystemBarBackgrounds">true</item>    
     <item name="android:statusBarColor">#ff3f527a</item>
     <item name="android:windowLightStatusBar">false</item>
