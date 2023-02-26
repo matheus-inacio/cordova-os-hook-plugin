@@ -6,10 +6,8 @@
     <keywords>cordova,eugestor,outsystems</keywords>
     <repo>https://github.com/matheus-inacio/cordova-os-hook-plugin.git</repo>
 
-     <platform name="android">             
-        <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='MainActivity']" mode="merge">
-            <activity android:name="MainActivity" android:theme="@style/AppTheme"/>
-        </edit-config>
+     <platform name="android">
+        <hook type="before_plugin_install" src="scripts/androidBeforeInstall.js" />
         <source-file src="styles.xml" target-dir="app/src/main/res/values" />
     </platform>
 
