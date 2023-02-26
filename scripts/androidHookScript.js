@@ -9,7 +9,7 @@ module.exports = function(ctx) {
     
     /* Updates splash icon */
     var icSplashPath = path.join(ctx.opts.projectRoot, 'platforms/android/app/src/main/res/values/themes.xml');
-    var themesDoc = xmlHelpers.parseElementtreeSync(manifestPath);
+    var themesDoc = xmlHelpers.parseElementtreeSync(icSplashPath);
     var iconTag = doc.find('item[@name="windowSplashScreenAnimatedIcon"]');
     iconTag.text = "@drawable/eg_logo";
     fs.writeFileSync(icSplashPath, themesDoc.write({indent: 4}), 'utf-8');
