@@ -3,6 +3,8 @@ const path = require('path');
 const { xmlHelpers } = require('cordova-common');
 
 module.exports = function(ctx) {
+    var icSplashPath = path.join(ctx.opts.projectRoot, 'platforms/android/app/src/main/res/drawable/ic_cdv_splashscreen.xml');
+    fs.renameSync(icSplashPath, icSplashPath+'.bak');
     return;
     var manifestPath = path.join(ctx.opts.projectRoot, 'platforms/android/app/src/main/AndroidManifest.xml');
     var doc = xmlHelpers.parseElementtreeSync(manifestPath);
