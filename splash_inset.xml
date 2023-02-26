@@ -1,5 +1,5 @@
 <inset xmlns:android="http://schemas.android.com/apk/res/android"
-    android:drawable="@drawable/logo_simple"
+    android:drawable="@drawable/eg_logo"
     android:insetLeft="64dp"
     android:insetRight="64dp"
     android:insetTop="64dp"
