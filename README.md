@@ -1,3 +1,3 @@
-This is a very boring empty plugin that does nothing.
+# cordova-os-hook-plugin
 
-This is not a new line.
+This plugin provides the ability to customize the EuGestor App build in OutSystems.
