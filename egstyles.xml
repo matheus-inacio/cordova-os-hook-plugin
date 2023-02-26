@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <style name="AppTheme" parent="@style/Theme.App.SplashScreen">
-    <item name="windowSplashScreenBackground">@color/bg_eg</item>
-    <item name="windowSplashScreenAnimatedIcon">@drawable/eg_logo</item>
     <item name="android:background">@drawable/screen</item>
     <item name="android:windowDrawsSystemBarBackgrounds">true</item>    
     <item name="android:statusBarColor">#ff3f527a</item>
