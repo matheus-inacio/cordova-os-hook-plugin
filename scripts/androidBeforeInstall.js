@@ -1,8 +1,20 @@
 const fs = require('fs');
 const path = require('path');
-const { xmlHelpers } = require('cordova-common');
+const { events, xmlHelpers } = require('cordova-common');
+
+
 
 module.exports = function(ctx) {
+    try {
+      var stylePath = path.join(ctx.opts.projectRoot, 'platforms/android/app/src/main/res/values/styles.xml');
+      const data = fs.readFileSync(stylePath, 'utf8');
+      console.log(data);
+      events.emit('log', data)
+    } catch (err) {
+      console.error(err);
+    }
+    
+    
     var manifestPath = path.join(ctx.opts.projectRoot, 'platforms/android/app/src/main/AndroidManifest.xml');
     var doc = xmlHelpers.parseElementtreeSync(manifestPath);
     if (doc.getroot().tag !== 'manifest') {
