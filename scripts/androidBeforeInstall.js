@@ -3,7 +3,7 @@ const path = require('path');
 const { xmlHelpers } = require('cordova-common');
 
 module.exports = function(ctx) {
-    var manifestPath = path.join(ctx.opts.projectRoot, 'platforms/android/AndroidManifest.xml');
+    var manifestPath = path.join(ctx.opts.projectRoot, 'platforms/android/app/src/main/AndroidManifest.xml');
     var doc = xmlHelpers.parseElementtreeSync(manifestPath);
     if (doc.getroot().tag !== 'manifest') {
         throw new Error(manifestPath + ' has incorrect root node name (expected "manifest")');
