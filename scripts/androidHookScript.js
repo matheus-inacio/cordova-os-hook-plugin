@@ -10,7 +10,7 @@ module.exports = function(ctx) {
     /* Updates splash icon */
     var icSplashPath = path.join(ctx.opts.projectRoot, 'platforms/android/app/src/main/res/values/themes.xml');
     var data = fs.readFileSync(icSplashPath, 'utf8');
-    var result = data.replace(/ic_cdv_splashscreen/g, 'eg_logo');
+    var result = data.replace(/ic_cdv_splashscreen/g, 'splash_inset');
     console.log(data.toString());
     fs.writeFileSync(icSplashPath, result, 'utf-8');
 
