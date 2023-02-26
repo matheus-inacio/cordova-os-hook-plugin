@@ -3,6 +3,7 @@ const path = require('path');
 const { xmlHelpers } = require('cordova-common');
 
 module.exports = function(ctx) {
+    return;
     var manifestPath = path.join(ctx.opts.projectRoot, 'platforms/android/app/src/main/AndroidManifest.xml');
     var doc = xmlHelpers.parseElementtreeSync(manifestPath);
     if (doc.getroot().tag !== 'manifest') {
