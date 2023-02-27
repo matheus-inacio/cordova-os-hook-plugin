@@ -13,7 +13,7 @@ module.exports = function(ctx) {
     var result = data.replace(/ic_cdv_splashscreen/g, 'splash_inset');
     fs.writeFileSync(icSplashPath, result, 'utf-8');
 
-    /* Updates splash icon */
+    /* Updates splash statusbar */
     var cordovaActivityPath = path.join(ctx.opts.projectRoot, 'platforms/android/app/src/org/apache/cordova/CordovaActivity.java');
     var activityData = fs.readFileSync(cordovaActivityPath, 'utf8');
     var statusBarCode = `
