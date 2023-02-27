@@ -17,9 +17,12 @@ module.exports = function(ctx) {
     var cordovaActivityPath = path.join(ctx.opts.projectRoot, 'platforms/android/CordovaLib/src/org/apache/cordova/CordovaActivity.java');
     var activityData = fs.readFileSync(cordovaActivityPath, 'utf8');
     var statusBarCode = `
-        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        getWindow().setStatusBarColor(android.graphics.Color.parseColor("#FF43598A"));
+        try {
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            getWindow().setStatusBarColor(android.graphics.Color.parseColor("#FF43598A"));
+        } catch (Exception ex) {
+          // Ignore  
+        };
         super.onCreate(savedInstanceState);`;
     var newCode = activityData.replaceAll('super.onCreate(savedInstanceState);', statusBarCode);
     console.log(newCode.toString());
