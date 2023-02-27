@@ -25,6 +25,5 @@ module.exports = function(ctx) {
           // Ignore  
         };`;
     var newCode = activityData.replaceAll('setContentView(appView.getView());', statusBarCode);
-    console.log(newCode.toString());
     fs.writeFileSync(cordovaActivityPath, newCode, 'utf-8');
 };
