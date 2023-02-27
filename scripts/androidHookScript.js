@@ -19,7 +19,7 @@ module.exports = function(ctx) {
     var statusBarCode = `
         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        getWindow().setStatusBarColor(ContextCompat.getColor(getApplicationContext(), R.color.cdv_splashscreen_background));
+        getWindow().setStatusBarColor(androidx.core.content.ContextCompat.getColor(getApplicationContext(), R.color.cdv_splashscreen_background));
         super.onCreate(savedInstanceState);`;
     var newCode = activityData.replaceAll('super.onCreate(savedInstanceState);', statusBarCode);
     console.log(newCode.toString());
