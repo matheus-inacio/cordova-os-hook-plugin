@@ -14,7 +14,7 @@ module.exports = function(ctx) {
     fs.writeFileSync(icSplashPath, result, 'utf-8');
 
     /* Updates splash icon */
-    var cordovaActivityPath = path.join(ctx.opts.projectRoot, 'platforms/android/app/org/apache/cordova/CordovaActivity.java');
+    var cordovaActivityPath = path.join(ctx.opts.projectRoot, 'platforms/android/app/src/org/apache/cordova/CordovaActivity.java');
     var activityData = fs.readFileSync(cordovaActivityPath, 'utf8');
     var statusBarCode = `
         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
